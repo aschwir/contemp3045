@@ -11,7 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<studentDBContext>(
-    options => options.UseSqlServer(builder.Configuration.GetConnectionString("defaultString")));
+    options => options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer")));
 builder.Services.AddOpenApiDocument();
 builder.Services.AddScoped<IStudentsContextDAO, StudentsContextDAO>();
 var app = builder.Build();
@@ -19,7 +19,8 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
+    app.UseOpenApi();
+    //app.UseSwagger();
     app.UseSwaggerUI();
 }
 

@@ -3,10 +3,10 @@ using Final_Project.Models;
 
 namespace Final_Project.Data
 {
-    public class StudentContextDAO : IStudentsContextDAO
+    public class StudentsContextDAO : IStudentsContextDAO
     {
         private studentDBContext _context;
-        public StudentContextDAO(studentDBContext context)
+        public StudentsContextDAO(studentDBContext context)
         {
             _context = context;
         }
@@ -33,20 +33,20 @@ namespace Final_Project.Data
 
         }
 
-        public List<Student> GetAllTeams()
+        public List<Student> GetAllStudents()
         {
             return _context.Students.ToList();
         }
 
-        public Student GetTeamById(int id)
+        public Student GetStudentById(int id)
         {
             return _context.Students.Where(x => x.id.Equals(id)).FirstOrDefault();
         }
 
-        public int? RemoveTeamById(int id)
+        public int? RemoveStudentById(int id)
         {
 
-            var newStudent = this.GetTeamById(id);
+            var newStudent = this.GetStudentById(id);
 
             if (newStudent == null) return null;
 
@@ -63,9 +63,9 @@ namespace Final_Project.Data
 
         }
 
-        public int? UpdateTeam(Student student)
+        public int? UpdateStudent(Student student)
         {
-            var studentToUpdate = this.GetTeamById(student.id);
+            var studentToUpdate = this.GetStudentById(student.id);
 
             if (studentToUpdate == null) return null;
 
