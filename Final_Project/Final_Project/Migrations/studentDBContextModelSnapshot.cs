@@ -17,10 +17,10 @@ namespace Final_Project.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.14")
+                .HasAnnotation("ProductVersion", "8.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("Final_Project.Models.Student", b =>
                 {
@@ -28,10 +28,10 @@ namespace Final_Project.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
-                    b.Property<DateTime>("birthdate")
-                        .HasColumnType("datetime2");
+                    b.Property<DateOnly>("birthdate")
+                        .HasColumnType("date");
 
                     b.Property<string>("college_program")
                         .IsRequired()
@@ -57,7 +57,7 @@ namespace Final_Project.Migrations
                         new
                         {
                             id = 1,
-                            birthdate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(14),
+                            birthdate = new DateOnly(1980, 7, 19),
                             college_program = "Information Technology",
                             fName = "Andrew",
                             lName = "Schwirzinski",
