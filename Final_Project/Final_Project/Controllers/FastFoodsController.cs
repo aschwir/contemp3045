@@ -16,33 +16,25 @@ namespace Final_Project.Controllers
 
         public FastFoodsController(ILogger<FastFoodsController> logger, IStudentsContextDAO context)
         {
-            _logger = logger; 
+            _logger = logger;
             _context = context;
         }
 
-        [HttpGet]
-        public IActionResult GetFavoriteFoods(int? id)
-        {
-            var query = _Context.FavoriteFood.AsQueryable();
 
-            if (id != null && id > 0)
-            {
-                var favoritefood = query.FirstOrDefault(ff => ff.Id == id);
-                return Ok(favoritefood);
-            }
-            else
-            {
-                var FavoriteFoods = query.Take(5).ToList();
-                return Ok(FavoriteFoods);
-            }
+        //run the functions for fastfood
+        [HttpGet]
+        public IActionResult Get()
+        {
+            return Ok();
 
         }
 
         [HttpPost]
- 
+
+        
 
 
 
-
+    }
 
 }

@@ -13,6 +13,12 @@ namespace Final_Project.Data
 
 
         //fuctions for fastfood 
+        public List<FavoriteFood> getAllFavoriteFoods()
+        {
+            return _context.FavoriteFood.ToList();
+        }
+        
 
-
+        }
+    }
 }
