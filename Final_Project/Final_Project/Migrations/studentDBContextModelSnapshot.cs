@@ -53,7 +53,7 @@ namespace Final_Project.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 12, 3, 17, 14, 34, 879, DateTimeKind.Local).AddTicks(6784),
+                            CreatedAt = new DateTime(2023, 12, 3, 18, 32, 27, 503, DateTimeKind.Local).AddTicks(6072),
                             Cuisine = "Mexican",
                             Description = "Grilled meat and veggies in a flour shell",
                             Name = "Tacos"
@@ -61,7 +61,7 @@ namespace Final_Project.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2023, 12, 3, 17, 14, 34, 879, DateTimeKind.Local).AddTicks(6830),
+                            CreatedAt = new DateTime(2023, 12, 3, 18, 32, 27, 503, DateTimeKind.Local).AddTicks(6121),
                             Cuisine = "French",
                             Description = "Delicious form of cut potatos",
                             Name = "French Fries"
@@ -69,10 +69,50 @@ namespace Final_Project.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2023, 12, 3, 17, 14, 34, 879, DateTimeKind.Local).AddTicks(6833),
+                            CreatedAt = new DateTime(2023, 12, 3, 18, 32, 27, 503, DateTimeKind.Local).AddTicks(6124),
                             Cuisine = "Italian",
                             Description = "Pasta + chicken = bussin",
                             Name = "Chicken Alfredo"
+                        });
+                });
+
+            modelBuilder.Entity("Final_Project.Models.Hobby", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Hobby");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedAt = new DateTime(2023, 12, 3, 18, 32, 27, 503, DateTimeKind.Local).AddTicks(6146),
+                            Description = "Staying fit ",
+                            Name = "Working out"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedAt = new DateTime(2023, 12, 3, 18, 32, 27, 503, DateTimeKind.Local).AddTicks(6149),
+                            Description = "Enjoying the way imagination runs wild",
+                            Name = "Art"
                         });
                 });
 
