@@ -16,6 +16,7 @@ builder.Services.AddDbContext<studentDBContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer")));
 //builder.Services.AddOpenApiDocument();
 builder.Services.AddScoped<IStudentsContextDAO, StudentsContextDAO>();
+builder.Services.AddScoped<IFastFoodContextDAO, FastFoodContextDAO>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

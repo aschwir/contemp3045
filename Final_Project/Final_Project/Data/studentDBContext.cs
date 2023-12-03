@@ -30,16 +30,16 @@ namespace Final_Project.Data
 
         );
 
-            builder.Entity<Hobby>().HasData(
-             new Hobby { id = 1, Name = "Working out", Description = "Staying fit ", CreatedAt = DateTime.Now },
-            new Hobby { id = 2, Name = "Art", Description = "Enjoying the way imagination runs wild", CreatedAt = DateTime.Now }
+           // builder.Entity<Hobby>().HasData(
+         //    new Hobby { id = 1, Name = "Working out", Description = "Staying fit ", CreatedAt = DateTime.Now },
+           // new Hobby { id = 2, Name = "Art", Description = "Enjoying the way imagination runs wild", CreatedAt = DateTime.Now }
 
-    );
+   // );
 
         }
 
         public DbSet<Student> Students { get; set; }
-        public DbSet<Hobby> Hobbies { get; set; }
+       // public DbSet<Hobby> Hobbies { get; set; }
         public DbSet<FavoriteFood> FavoriteFood { get; set; }
     }
 }
