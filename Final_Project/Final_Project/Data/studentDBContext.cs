@@ -35,15 +35,24 @@ namespace Final_Project.Data
         );
 
             builder.Entity<Hobby>().HasData(
+<<<<<<< HEAD
             new Hobby { Id = 1, Name = "Working out", Description = "Staying fit ", CreatedAt = DateTime.Now },
             new Hobby { Id = 2, Name = "Art", Description = "Enjoying the way imagination runs wild", CreatedAt = DateTime.Now }
+=======
+             new Hobby { Id = 1, CreatedAt =DateTime.Now,  Name = "Working out", Description = "Staying fit " },
+            new Hobby { Id = 2,  CreatedAt= DateTime.Now, Name = "Art", Description = "Enjoying the way imagination runs wild" }
+>>>>>>> 15824e446cd2d7b6183870406b7457442e585737
 
     );
 
         }
 
         public DbSet<Student> Students { get; set; }
+<<<<<<< HEAD
         public DbSet<Hobby> Hobby { get; set; }
+=======
+       public DbSet<Hobby> Hobbies { get; set; }
+>>>>>>> 15824e446cd2d7b6183870406b7457442e585737
         public DbSet<FavoriteFood> FavoriteFood { get; set; }
     }
 }
