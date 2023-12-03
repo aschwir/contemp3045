@@ -51,8 +51,9 @@ namespace Final_Project.Migrations
                 columns: new[] { "Id", "CreatedAt", "Cuisine", "Description", "Name" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2023, 12, 3, 12, 27, 14, 307, DateTimeKind.Local).AddTicks(9272), "Mexican", "Grilled meat and veggies in a flour shell", "Tacos" },
-                    { 2, new DateTime(2023, 12, 3, 12, 27, 14, 307, DateTimeKind.Local).AddTicks(9318), "French", "Delicious form of cut potatos", "French Fries" }
+                    { 1, new DateTime(2023, 12, 3, 17, 14, 34, 879, DateTimeKind.Local).AddTicks(6784), "Mexican", "Grilled meat and veggies in a flour shell", "Tacos" },
+                    { 2, new DateTime(2023, 12, 3, 17, 14, 34, 879, DateTimeKind.Local).AddTicks(6830), "French", "Delicious form of cut potatos", "French Fries" },
+                    { 4, new DateTime(2023, 12, 3, 17, 14, 34, 879, DateTimeKind.Local).AddTicks(6833), "Italian", "Pasta + chicken = bussin", "Chicken Alfredo" }
                 });
 
             migrationBuilder.InsertData(
@@ -62,7 +63,8 @@ namespace Final_Project.Migrations
                 {
                     { 1, new DateOnly(1980, 7, 19), "Information Technology", "Andrew", "Schwirzinski", "junior" },
                     { 2, new DateOnly(2002, 2, 27), "Information Technology", "Kozimjon", "Kuchkorov", "pre-junior" },
-                    { 3, new DateOnly(2004, 9, 17), "Information Technology", "Ji'Yahna", "Meade", "Junior" }
+                    { 3, new DateOnly(2004, 9, 17), "Information Technology", "Ji'Yahna", "Meade", "Junior" },
+                    { 4, new DateOnly(2003, 4, 6), "Information Technology", "Abdoul", "Sow", "Junior" }
                 });
         }
 

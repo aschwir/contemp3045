@@ -53,7 +53,7 @@ namespace Final_Project.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 12, 3, 12, 27, 14, 307, DateTimeKind.Local).AddTicks(9272),
+                            CreatedAt = new DateTime(2023, 12, 3, 17, 14, 34, 879, DateTimeKind.Local).AddTicks(6784),
                             Cuisine = "Mexican",
                             Description = "Grilled meat and veggies in a flour shell",
                             Name = "Tacos"
@@ -61,10 +61,18 @@ namespace Final_Project.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2023, 12, 3, 12, 27, 14, 307, DateTimeKind.Local).AddTicks(9318),
+                            CreatedAt = new DateTime(2023, 12, 3, 17, 14, 34, 879, DateTimeKind.Local).AddTicks(6830),
                             Cuisine = "French",
                             Description = "Delicious form of cut potatos",
                             Name = "French Fries"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreatedAt = new DateTime(2023, 12, 3, 17, 14, 34, 879, DateTimeKind.Local).AddTicks(6833),
+                            Cuisine = "Italian",
+                            Description = "Pasta + chicken = bussin",
+                            Name = "Chicken Alfredo"
                         });
                 });
 
@@ -125,6 +133,15 @@ namespace Final_Project.Migrations
                             college_program = "Information Technology",
                             fName = "Ji'Yahna",
                             lName = "Meade",
+                            year_in_program = "Junior"
+                        },
+                        new
+                        {
+                            id = 4,
+                            birthdate = new DateOnly(2003, 4, 6),
+                            college_program = "Information Technology",
+                            fName = "Abdoul",
+                            lName = "Sow",
                             year_in_program = "Junior"
                         });
                 });
