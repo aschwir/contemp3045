@@ -15,7 +15,7 @@ namespace Final_Project.Data
 
         public List<Hobby> GetHobbies()
         {
-            return _context.Hobby.ToList();
+            return _context.Hobbies.ToList();
         }
     }
 }
