@@ -1,23 +1,23 @@
-﻿using Final_Project.Data;
+﻿
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Linq;
-using Final_Project.Data;
 using Final_Project.Models;
-using System.Collections.Generic;
+using Final_Project.Interfaces;
+
 
 namespace Final_Project.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class FavoriteFoodsController : ControllerBase
+    public class FastFoodsController : ControllerBase
     {
-        private readonly AppDBContext _Context;
+        //private readonly AppDBContext _Context;
+        private readonly ILogger<FastFoodsController> _logger;
+        private readonly IStudentsContextDAO _context;
 
-        public FavoriteFoodsController(AppDBContext context)
+        public FastFoodsController(ILogger<FastFoodsController> logger, IStudentsContextDAO context)
         {
-            _Context = context;
+            _logger = logger; 
+            _context = context;
         }
 
         [HttpGet]
@@ -39,58 +39,7 @@ namespace Final_Project.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateFavoriteFood([FromBody] FavoriteFood favoriteFood)
-        {
-            if (favoriteFood == null)
-            {
-                return BadRequest("FavoriteFood object is null");
-            }
-
-            _Context.FavoriteFood.Add(favoriteFood);
-            _Context.SaveChanges();
-
-            return CreatedAtRoute(nameof(GetFavoriteFoods), new { id = favoriteFood.Id }, favoriteFood);
-        }
-
-        [HttpPut("{id}")]
-        public IActionResult UpdateFavoriteFood(int id, [FromBody] FavoriteFood favoriteFood)
-        {
-            if (favoriteFood == null || id != favoriteFood.Id)
-            {
-                return BadRequest("Invalid request");
-            }
-            var existingFavoriteFood = _Context.FavoriteFood.Find(id);
-            if (existingFavoriteFood == null)
-            {
-                return NotFound("FavoriteFood is not Found");
-            }
-
-            existingFavoriteFood.Name = favoriteFood.Name;
-            existingFavoriteFood.Cuisine = favoriteFood.Cuisine;
-            existingFavoriteFood.Description = favoriteFood.Description;
-
-            _Context.SaveChanges();
-
-            return NoContent();
-        }
-
-        [HttpDelete("{id}")]
-        public IActionResult DeleteFavoriteFood(int id)
-        {
-            var favoriteFood = _Context.FavoriteFood.Find(id);
-            if (favoriteFood == null)
-            {
-                return NotFound("FavoriteFood not found");
-            }
-
-            _Context.FavoriteFood.Remove(favoriteFood);
-            _Context.SaveChanges();
-
-            return NoContent();
-        }
-
-
-    }
+ 
 
 
 
