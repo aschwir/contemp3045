@@ -30,6 +30,7 @@ namespace Final_Project.Data
             builder.Entity<FavoriteFood>().HasData(
                 new FavoriteFood { Id = 1, Name = "Tacos", Cuisine = "Mexican", Description = "Grilled meat and veggies in a flour shell", CreatedAt = DateTime.Now },
                 new FavoriteFood { Id = 2, Name = "French Fries", Cuisine = "French", Description = "Delicious form of cut potatos", CreatedAt = DateTime.Now },
+                 new FavoriteFood { Id = 3, Name = "Kebab", Cuisine = "Turkish", Description = "Grilled meat", CreatedAt = DateTime.Now },
                 new FavoriteFood { Id = 4, Name = "Chicken Alfredo", Cuisine = "Italian", Description = "Pasta + chicken = bussin", CreatedAt = DateTime.Now }
             
 
