@@ -18,6 +18,10 @@ builder.Services.AddDbContext<studentDBContext>(
 builder.Services.AddScoped<IStudentsContextDAO, StudentsContextDAO>();
 builder.Services.AddScoped<IFastFoodContextDAO, FastFoodContextDAO>();
 builder.Services.AddScoped<IHobbyContextDAO, HobbyContextDAO>();
+builder.Services.AddScoped<IMovieContextDAO, MovieContextDAO>();
+
+
+
 
 var app = builder.Build();
 

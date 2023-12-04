@@ -18,9 +18,9 @@ namespace Final_Project.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAll()
+        public IActionResult Get()
         {
-            return Ok(_context.GetMovie());
+            return Ok(_context.getMovie());
         }
 
     }

@@ -1,5 +1,6 @@
 ﻿using Final_Project.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 
 
@@ -41,6 +42,10 @@ namespace Final_Project.Data
 
     );
 
+            builder.Entity<Movie>().HasData(
+                new Movie { id = 1, Title = "Stepbrothers", Plot = " Stepbrothers need to learn to like each other and become adults", DateCreated = DateTime.Now}
+                );
+
         }
 
         public DbSet<Student> Students { get; set; }
@@ -48,5 +53,8 @@ namespace Final_Project.Data
         public DbSet<Hobby> Hobby { get; set; }
 
         public DbSet<FavoriteFood> FavoriteFood { get; set; }
+
+        public DbSet<Movie> Movie { get; set; }
+
     }
 }
