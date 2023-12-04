@@ -1,7 +1,5 @@
-﻿
 using Microsoft.AspNetCore.Mvc;
 using Final_Project.Interfaces;
-
 
 namespace Final_Project.Controllers
 {
@@ -9,7 +7,6 @@ namespace Final_Project.Controllers
     [Route("[controller]")]
     public class FastFoodsController : ControllerBase
     {
-        //private readonly AppDBContext _Context;
         private readonly ILogger<FastFoodsController> _logger;
         private readonly IFastFoodContextDAO _context;
 
