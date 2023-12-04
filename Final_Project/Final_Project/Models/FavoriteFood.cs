@@ -9,12 +9,18 @@ namespace Final_Project.Models
     {
         public DbSet<FavoriteFood> FavoriteFoods { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            // Configure your database connection
-            optionsBuilder.UseSqlServer("");
-        }
+       protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+{
+    if (!optionsBuilder.IsConfigured)
+    {
+        IConfigurationRoot configuration = new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("appsettings.json")
+            .Build();
+
+        optionsBuilder.UseSqlServer(configuration.GetConnectionString("SqlServer"));
     }
+}
 
     public class FavoriteFood
     {
