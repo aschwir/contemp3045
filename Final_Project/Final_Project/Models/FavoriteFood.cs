@@ -12,7 +12,7 @@ namespace Final_Project.Models
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             // Configure your database connection
-            optionsBuilder.UseSqlServer("your_connection_string_here");
+            optionsBuilder.UseSqlServer("");
         }
     }
 
