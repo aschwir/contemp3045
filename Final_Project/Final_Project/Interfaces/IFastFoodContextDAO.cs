@@ -8,5 +8,9 @@ namespace Final_Project.Interfaces
         //all the required functions for fastfood
 
         List<FavoriteFood> getAllFavoriteFoods();
+        FavoriteFood getFavoriteFoodById(int id);
+        FavoriteFood AddFavoriteFood(FavoriteFood food);
+        FavoriteFood UpdateFavoriteFood(int id, FavoriteFood updatedFood);
+        FavoriteFood DeleteFavoriteFood(int id);
     }
 }
