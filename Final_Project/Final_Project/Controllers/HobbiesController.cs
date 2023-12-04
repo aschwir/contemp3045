@@ -20,8 +20,11 @@ namespace Final_Project.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
+            var hobbies = _context.GetHobbies();
             return Ok(_context.GetHobbies());
         }
+
+       
 
     }
 }
