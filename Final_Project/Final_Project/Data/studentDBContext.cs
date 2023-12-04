@@ -39,14 +39,14 @@ namespace Final_Project.Data
             builder.Entity<Hobby>().HasData(
 
             new Hobby { Id = 1, Name = "Working out", Description = "Staying fit ", CreatedAt = DateTime.Now },
-            new Hobby { Id = 2, Name = "Art", Description = "Enjoying the way imagination runs wild", CreatedAt = DateTime.Now }
+            new Hobby { Id = 2, Name = "Art", Description = "Enjoying the way imagination runs wild", CreatedAt = DateTime.Now },
             new Hobby { Id = 4, Name = "Gaming", Description = "Playin the game, specifically PS5", CreatedAt = DateTime.Now }
             
 
     );
 
             builder.Entity<Movie>().HasData(
-                new Movie { id = 1, Title = "Stepbrothers", Plot = " Stepbrothers need to learn to like each other and become adults", DateCreated = DateTime.Now}
+                new Movie { id = 1, Title = "Stepbrothers", Plot = " Stepbrothers need to learn to like each other and become adults", DateCreated = DateTime.Now},
                 new Movie { id = 4, Title = "Avengers", Plot = "Earth's Mightest Heroes", DateCreated = DateTime.Now}
                 );
 
