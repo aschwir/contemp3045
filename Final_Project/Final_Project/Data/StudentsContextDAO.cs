@@ -15,7 +15,6 @@ namespace Final_Project.Data
         {
             var newStudent = _context.Students.Where(x => x.fName.Equals(student.fName) && x.lName.Equals(student.lName)).FirstOrDefault();
 
-            if (newStudent != null) return null;
 
             try
             {
@@ -30,7 +29,6 @@ namespace Final_Project.Data
             {
                 return 0;
             }
-
         }
 
         public List<Student> GetAllStudents()
@@ -60,7 +58,6 @@ namespace Final_Project.Data
             {
                 return 0;
             }
-
         }
 
         public int? UpdateStudent(Student student)
@@ -81,14 +78,11 @@ namespace Final_Project.Data
                 _context.Students.Update(studentToUpdate);
                 _context.SaveChanges();
                 return 1;
-
             }
             catch (Exception)
             {
                 return 0;
             }
-
-
         }
     }
 }
