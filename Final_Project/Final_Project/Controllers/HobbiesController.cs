@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Final_Project.Controllers
 {
-
     [ApiController]
     [Route("[Controller]")]
     public class HobbiesController : ControllerBase
