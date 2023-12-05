@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\14194\\Desktop\\Final\\contemp3045\\Final_Project\\Final_Project\\Final_Project.csproj": {}
+    "C:\\Users\\Ji'Yahna\\source\\repos\\co\\Final_Project\\Final_Project\\Final_Project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\14194\\Desktop\\Final\\contemp3045\\Final_Project\\Final_Project\\Final_Project.csproj": {
+    "C:\\Users\\Ji'Yahna\\source\\repos\\co\\Final_Project\\Final_Project\\Final_Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\14194\\Desktop\\Final\\contemp3045\\Final_Project\\Final_Project\\Final_Project.csproj",
+        "projectUniqueName": "C:\\Users\\Ji'Yahna\\source\\repos\\co\\Final_Project\\Final_Project\\Final_Project.csproj",
         "projectName": "Final_Project",
-        "projectPath": "C:\\Users\\14194\\Desktop\\Final\\contemp3045\\Final_Project\\Final_Project\\Final_Project.csproj",
-        "packagesPath": "C:\\Users\\14194\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\14194\\Desktop\\Final\\contemp3045\\Final_Project\\Final_Project\\obj\\",
+        "projectPath": "C:\\Users\\Ji'Yahna\\source\\repos\\co\\Final_Project\\Final_Project\\Final_Project.csproj",
+        "packagesPath": "C:\\Users\\Ji'Yahna\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ji'Yahna\\source\\repos\\co\\Final_Project\\Final_Project\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\14194\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ji'Yahna\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

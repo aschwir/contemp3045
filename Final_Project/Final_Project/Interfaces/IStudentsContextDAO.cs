@@ -4,12 +4,12 @@ namespace Final_Project.Interfaces
 {
     public interface IStudentsContextDAO
     {
-         List<Student> GetAllStudents();
+        List<Student> GetAllStudents();
         public Student GetStudentById(int studentId);
         int? RemoveStudentById(int id);
-        int? UpdateStudent(Student student);
-      
-        int? Add(Student student);
+        int? UpdateStudent(int id, Student updatedStudent);
+
+        int? AddStudent(Student student);
 
     }
 }

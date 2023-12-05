@@ -1,29 +1,43 @@
 ﻿using Final_Project.Interfaces;
 using Final_Project.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Final_Project.Data
 {
+
     public class StudentsContextDAO : IStudentsContextDAO
     {
-        private studentDBContext _context;
+        private readonly studentDBContext _context;
+
         public StudentsContextDAO(studentDBContext context)
         {
             _context = context;
         }
 
-        public int? Add(Student student)
+        public int? AddStudent(Student student)
         {
-            var newStudent = _context.Students.Where(x => x.fName.Equals(student.fName) && x.lName.Equals(student.lName)).FirstOrDefault();
+            if (student == null)
+            {
+                throw new ArgumentNullException(nameof(student));
+            }
 
+
+
+            var existingStudent = _context.Students.FirstOrDefault(x => x.fName.Equals(student.fName) && x.lName.Equals(student.lName));
+
+            if (existingStudent != null)
+            {
+
+                return null;
+            }
 
             try
             {
-
-
                 _context.Students.Add(student);
                 _context.SaveChanges();
-                return 1;
-
+                return student.id;
             }
             catch (Exception)
             {
@@ -38,40 +52,46 @@ namespace Final_Project.Data
 
         public Student GetStudentById(int id)
         {
-            return _context.Students.Where(x => x.id.Equals(id)).FirstOrDefault();
+            return _context.Students.FirstOrDefault(x => x.id == id);
         }
 
         public int? RemoveStudentById(int id)
         {
+            var studentToRemove = _context.Students.Find(id);
 
-            var newStudent = this.GetStudentById(id);
+            if (studentToRemove == null)
+            {
 
-            if (newStudent == null) return null;
+                return -1;
+            }
 
             try
             {
-                _context.Students.Remove(newStudent);
+                _context.Students.Remove(studentToRemove);
                 _context.SaveChanges();
                 return 1;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
         }
 
-        public int? UpdateStudent(Student student)
+        public int? UpdateStudent(int id, Student updatedStudent)
         {
-            var studentToUpdate = this.GetStudentById(student.id);
+            var studentToUpdate = _context.Students.Find(updatedStudent.id);
 
-            if (studentToUpdate == null) return null;
+            if (studentToUpdate == null)
+            {
 
-            studentToUpdate.fName = student.fName;
-            studentToUpdate.lName = student.lName;
-            studentToUpdate.birthdate = student.birthdate;
-            studentToUpdate.college_program = student.college_program;
-            studentToUpdate.year_in_program = student.year_in_program;
+                return -1;
+            }
 
+            studentToUpdate.fName = updatedStudent.fName;
+            studentToUpdate.lName = updatedStudent.lName;
+            studentToUpdate.birthdate = updatedStudent.birthdate;
+            studentToUpdate.college_program = updatedStudent.college_program;
+            studentToUpdate.year_in_program = updatedStudent.year_in_program;
 
             try
             {
@@ -86,3 +106,4 @@ namespace Final_Project.Data
         }
     }
 }
+
