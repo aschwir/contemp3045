@@ -53,23 +53,31 @@ namespace Final_Project.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 12, 3, 20, 58, 47, 796, DateTimeKind.Local).AddTicks(2049),
+                            CreatedAt = new DateTime(2023, 12, 5, 1, 45, 16, 985, DateTimeKind.Local).AddTicks(8884),
                             Cuisine = "Mexican",
                             Description = "Grilled meat and veggies in a flour shell",
                             Name = "Tacos"
                         },
                         new
                         {
-                            Id = 2,
-                            CreatedAt = new DateTime(2023, 12, 3, 20, 58, 47, 796, DateTimeKind.Local).AddTicks(2098),
+                            Id = 3,
+                            CreatedAt = new DateTime(2023, 12, 5, 1, 45, 16, 985, DateTimeKind.Local).AddTicks(8932),
                             Cuisine = "French",
                             Description = "Delicious form of cut potatos",
                             Name = "French Fries"
                         },
                         new
                         {
+                            Id = 2,
+                            CreatedAt = new DateTime(2023, 12, 5, 1, 45, 16, 985, DateTimeKind.Local).AddTicks(8934),
+                            Cuisine = "Turkish",
+                            Description = "Grilled meat",
+                            Name = "Kebab"
+                        },
+                        new
+                        {
                             Id = 4,
-                            CreatedAt = new DateTime(2023, 12, 3, 20, 58, 47, 796, DateTimeKind.Local).AddTicks(2100),
+                            CreatedAt = new DateTime(2023, 12, 5, 1, 45, 16, 985, DateTimeKind.Local).AddTicks(8937),
                             Cuisine = "Italian",
                             Description = "Pasta + chicken = bussin",
                             Name = "Chicken Alfredo"
@@ -103,16 +111,30 @@ namespace Final_Project.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 12, 3, 20, 58, 47, 796, DateTimeKind.Local).AddTicks(2126),
+                            CreatedAt = new DateTime(2023, 12, 5, 1, 45, 16, 985, DateTimeKind.Local).AddTicks(8963),
                             Description = "Staying fit ",
                             Name = "Working out"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2023, 12, 3, 20, 58, 47, 796, DateTimeKind.Local).AddTicks(2129),
+                            CreatedAt = new DateTime(2023, 12, 5, 1, 45, 16, 985, DateTimeKind.Local).AddTicks(8967),
                             Description = "Enjoying the way imagination runs wild",
                             Name = "Art"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedAt = new DateTime(2023, 12, 5, 1, 45, 16, 985, DateTimeKind.Local).AddTicks(8969),
+                            Description = "Enjoying the way imagination runs wild",
+                            Name = "Art"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreatedAt = new DateTime(2023, 12, 5, 1, 45, 16, 985, DateTimeKind.Local).AddTicks(8971),
+                            Description = "Playin the game, specifically PS5",
+                            Name = "Gaming"
                         });
                 });
 
@@ -143,9 +165,23 @@ namespace Final_Project.Migrations
                         new
                         {
                             id = 1,
-                            DateCreated = new DateTime(2023, 12, 3, 20, 58, 47, 796, DateTimeKind.Local).AddTicks(2153),
-                            Plot = "Two step brother need to learn to like each other an become adults",
+                            DateCreated = new DateTime(2023, 12, 5, 1, 45, 16, 985, DateTimeKind.Local).AddTicks(8997),
+                            Plot = " Stepbrothers need to learn to like each other and become adults",
                             Title = "Stepbrothers"
+                        },
+                        new
+                        {
+                            id = 4,
+                            DateCreated = new DateTime(2023, 12, 5, 1, 45, 16, 985, DateTimeKind.Local).AddTicks(9000),
+                            Plot = "Earth's Mightest Heroes",
+                            Title = "Avengers"
+                        },
+                        new
+                        {
+                            id = 3,
+                            DateCreated = new DateTime(2023, 12, 5, 1, 45, 16, 985, DateTimeKind.Local).AddTicks(9002),
+                            Plot = "Horror movie about girl beign connected my a phone in the same house decades apart, one is a serial killer. If the serial killer does something in the past it changes the present",
+                            Title = "The Call"
                         });
                 });
 
